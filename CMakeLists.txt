@@ -1,4 +1,4 @@
-project(aaki)
+project(aaki-modem)
 
 cmake_minimum_required(VERSION 2.8)
 set(CMAKE_BUILD_TYPE "Debug")
@@ -39,4 +39,4 @@ endif(NOT AAKI_CFG)
 #add_subdirectory (test)
 
 aux_source_directory(. SRC_LIST)
-add_executable(${PROJECT_NAME} ${SRC_LIST})
+add_library(${PROJECT_NAME} SHARED ${SRC_LIST})
